@@ -18,8 +18,8 @@ nav {
     align-items: center;
     justify-content: space-between;
     margin: 0 auto;
-    padding: 1rem 1.2rem;
-    background-color: rgb(0, 0, 60);
+    padding: 1rem 2rem;
+    /* background-color: rgb(0, 0, 60); */
     position: sticky;
     top: 0;
 }
@@ -33,7 +33,7 @@ nav {
 .nav-links {
     color: aliceblue;
     display: flex;
-    gap: 1.5rem;
+    gap: 2rem;
     list-style: none;
 }
 
@@ -49,6 +49,12 @@ nav {
 .burger {
     color: aliceblue;
     display: none;
+    background: none;
+    border: none;
+}
+
+.no-scroll {
+    overflow: hidden;
 }
 
 header {
@@ -82,5 +88,59 @@ h1 {
 
 p {
     color: aliceblue;
+}
+
+@media (max-width: 768px) {
+    nav {
+        z-index: 1000;
+    }
+
+    .logo {
+        position: relative;
+        z-index: 2000;
+    }
+
+    .burger {
+        display: block;
+        position: relative;
+        z-index: 2000;
+        cursor: pointer;
+        line-height: 0;
+    }
+
+    .burger svg {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .nav-links {
+        position: fixed;
+        inset: 0 0 0 auto;
+        width: min(75%, 320px);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        font-size: 1.3rem;
+        background-color: rgb(0, 0, 60);
+        transform: translateX(100%);
+        visibility: hidden;
+        transition: transform 0.3s ease, visibility 0.3s;
+        z-index: 1500;
+    }
+
+    nav.open .nav-links {
+        transform: translateX(0);
+        visibility: visible;
+    }
+
+    .burger svg {
+        transition: fill 0.2s, color 0.2s;
+    }
+
+    nav.open .burger svg {
+        fill: rgb(228, 0, 141);
+        color: rgb(228, 0, 141);
+    }
 }
 
