@@ -13,17 +13,17 @@ burger.addEventListener("click", () => {
     setMenu(!nav.classList.contains("open"));
 });
 
-// Cerrar al pulsar un enlace
+// CERRAR 1
 navLinks.forEach((link) => {
     link.addEventListener("click", () => setMenu(false));
 });
 
-// Cerrar con Escape
+// CWERRAR 2
 document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") setMenu(false);
 });
 
-// Cerrar si se agranda la ventana a escritorio
+// CERRAR 3
 window.matchMedia("(min-width: 769px)").addEventListener("change", (e) => {
     if (e.matches) setMenu(false);
 });
