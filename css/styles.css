@@ -115,8 +115,9 @@ p {
 
     .nav-links {
         position: fixed;
-        inset: 0 0 0 auto;
-        width: min(75%, 320px);
+        inset: 0;
+        width: 100%;
+        height: 100dvh;
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -132,15 +133,6 @@ p {
     nav.open .nav-links {
         transform: translateX(0);
         visibility: visible;
-    }
-
-    .burger svg {
-        transition: fill 0.2s, color 0.2s;
-    }
-
-    nav.open .burger svg {
-        fill: rgb(228, 0, 141);
-        color: rgb(228, 0, 141);
     }
 }
 
