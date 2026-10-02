@@ -1,0 +1,24 @@
+{
+  "name": "repaso-",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "tailwindcss -i ./css/input.css -o ./css/tailwind.css --watch",
+    "build": "tailwindcss -i ./css/input.css -o ./css/tailwind.css --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jaimemamalla/REPASO-.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Jaimemamalla/REPASO-/issues"
+  },
+  "homepage": "https://github.com/Jaimemamalla/REPASO-#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  }
+}
